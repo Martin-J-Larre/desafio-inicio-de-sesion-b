@@ -1,0 +1,14 @@
+<html lang="en">
+	<head>
+		<title>Log Out</title>
+		<%- include("../partials/head") %>
+        <meta http-equiv="refresh" content="2;url=/" />
+	</head>
+	<body>
+		<div class="logoutContainer d-flex flex-column align-items-center py-4">
+			<div class="logoutMessage text-center w-75 bg-color text-white py-5">
+				<h1>Good bye <%= user.username %>! See you later!</h1>
+			</div>
+		</div>
+	</body>
+</html>

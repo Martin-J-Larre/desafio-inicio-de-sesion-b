@@ -1,0 +1,20 @@
+<table class="fakerProductsTable table table-bordered bg-color mx-auto">
+	<tr class="text-light">
+		<th>Image</th>
+		<th>Name</th>
+		<th>Price</th>
+	</tr>
+	<% if (fakerProducts && fakerProducts.length > 0) { %> <% fakerProducts.forEach(product => { %>
+	<tr>
+		<td><img class="productImg" src="<%= product.imageURL %>"/></td>
+		<td><%= product.name %></td>
+		<td><%= product.price %></td>
+	</tr>
+	<%})%> <% }else{%>
+	<tr>
+		<td colspan="4">
+			<h3>No faker products found.</h3>
+		</td>
+	</tr>
+	<% }%>
+</table>

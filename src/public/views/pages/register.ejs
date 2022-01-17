@@ -1,0 +1,59 @@
+<html lang="en">
+	<head>
+		<title>Register</title>
+		<%- include("../partials/head") %>
+		<script defer src="/js/register.js"></script>
+	</head>
+	<body>
+		<div class="loginSection d-flex flex-column align-items-center py-4">
+			<div class="loginContainer d-flex flex-column align-items-center bg-dark text-white w-75 px-3">
+				<h2 class="mb-3 mt-3">Register</h2>
+				<form
+					class="
+						loginForm
+						d-flex
+						flex-column
+						justify-content-start
+						align-items-center
+						w-100
+						m-0
+						bg-dark
+						py-3
+						text-white
+					"
+					action="/register"
+					method="POST"
+				>
+					<div class="form-group w-75 mb-4">
+						<label for="title">Email</label>
+						<input
+							class="form-control"
+							type="email"
+							name="username"
+							id="username"
+							placeholder="Enter your email..."
+							required
+						/>
+					</div>
+
+					<div class="form-group w-75 mb-4">
+						<label for="title">Password</label>
+						<input
+							class="form-control"
+							type="password"
+							name="password"
+							id="password"
+							placeholder="Enter your password..."
+							required
+						/>
+					</div>
+
+					<div class="d-flex justify-content-around mt-3 w-50">
+						<button class="btn btn-primary" type="submit">Register</button>
+						<button class="btn btn-primary goToLoginButton" type="button">Go to Login</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

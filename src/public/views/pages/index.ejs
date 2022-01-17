@@ -1,0 +1,42 @@
+<html lang="en">
+	<head>
+		<title>Desafío LOG-IN POR FORMULARIO</title>
+		<%- include("../partials/head") %>
+		<script src="/js/ejs.min.js"></script>
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/normalizr@3.6.1/dist/normalizr.browser.min.js"></script>
+		<script defer src="/js/index.js"></script>
+
+	</head>
+	<body>
+
+		<div class="welcomeSection d-flex flex-column align-items-center py-4">
+			<div class="welcomeContainer d-flex align-items-center bg-color text-white w-75 p-2">
+				<%- include("../partials/sessions/welcome") %>
+			</div>
+		</div>
+
+		<div class="productsSection d-flex flex-column align-items-center pt-4">
+			<div class="productsContainer d-flex flex-column align-items-center w-75">
+				<%- include("../partials/products/form") %>
+
+				<div class="productsTableContainer bg-color text-white w-100 px-3">
+					<h2 class="text-center mb-3 mt-3">Products</h2>
+					<%- include("../partials/products/productsTable") %>
+				</div>
+
+				<div class="fakerProductsTableContainer bg-color text-white w-100 px-3">
+					<h2 class="text-center mb-3 mt-3">Faker Products</h2>
+					<%- include("../partials/products/fakerProductsTable") %>
+				</div>
+			</div>
+		</div>
+
+		<div class="messageCenterSection d-flex flex-column align-items-center py-4">
+			<div class="messageCenterContainer d-flex flex-column align-items-center bg-color text-white w-75 px-3">
+				<h2 class="mb-3 mt-3">Messages Center</h2>
+				<%- include("../partials/messages/messageCenter") %>
+			</div>
+		</div>
+	</body>
+</html>

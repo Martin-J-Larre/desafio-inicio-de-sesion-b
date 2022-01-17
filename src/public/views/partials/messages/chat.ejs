@@ -1,0 +1,16 @@
+<div class="chat w-100 border border-light p-2">
+	<%if(!messages) {%>
+	<h3 class="text-center m-3">Messages couldn't be loaded!</h3>
+	<% }else if (messages.length > 0) { %> <% messages.forEach(message => { %>
+	<li class="d-flex flex-column w-100 mb-3">
+		<div class="messageInfo d-flex w-100 align-items-center mb-1">
+			<img class="avatar mx-1" src="<%= message.author.avatar %>" />
+			<p class="email mx-2"><b><%= message.author.id %></b></p>
+			<p class="date mx-2">[<%= message.date %>]</p>
+		</div>
+		<p class="message mx-3 w-100"><i><%= message.message %></i></p>
+	</li>
+	<%})%> <% }else{%>
+	<h3 class="text-center m-3">There aren't messages...</h3>
+	<%}%>
+</div>
